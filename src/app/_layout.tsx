@@ -17,7 +17,7 @@ export default function RootLayout() {
   const scheme = colorScheme.get() || "dark";
   return (
     <ThemeProvider value={NAV_THEME[scheme]}>
-      <StatusBar style={scheme} />
+      <StatusBar style={scheme == "dark" ? "light" : "dark"} />
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="index" />
       </Stack>
