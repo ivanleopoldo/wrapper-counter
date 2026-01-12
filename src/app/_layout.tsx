@@ -1,4 +1,4 @@
-import "../global.css";
+import "@/global.css";
 
 import * as Device from "expo-device";
 import { Stack } from "expo-router";
