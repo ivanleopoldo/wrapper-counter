@@ -28,6 +28,8 @@
     --border: 0 0% 88%;
     --input: 0 0% 88%;
     --ring: 35 28% 43%;
+
+    --radius: 0.65rem;
   }
 
   .dark:root {
@@ -55,5 +57,7 @@
     --border: 89 10% 24%;
     --input: 0 0% 40%;
     --ring: 67 54% 92%;
+
+    --radius: 0.65rem;
   }
 }
