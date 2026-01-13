@@ -8,8 +8,14 @@ import { Stack } from "expo-router";
 import * as ScreenOrientation from "expo-screen-orientation";
 import { StatusBar } from "expo-status-bar";
 import { colorScheme } from "nativewind";
+import { Platform } from "react-native";
 
-if (Device.deviceType !== Device.DeviceType.TABLET) {
+if (
+  Device.deviceType !== Device.DeviceType.TABLET &&
+  Device.deviceType !== Device.DeviceType.DESKTOP &&
+  Device.deviceType !== Device.DeviceType.UNKNOWN &&
+  Platform.OS !== "web"
+) {
   ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
 }
 
@@ -19,7 +25,7 @@ export default function RootLayout() {
     <ThemeProvider value={NAV_THEME[scheme]}>
       <StatusBar style={scheme == "dark" ? "light" : "dark"} />
       <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="index" />
+        <Stack.Screen name="(tabs)" />
       </Stack>
       <PortalHost />
     </ThemeProvider>

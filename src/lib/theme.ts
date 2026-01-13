@@ -28,12 +28,6 @@ export const THEME = {
     ring: "hsl(35 28% 43%)",
 
     radius: "0.5rem",
-
-    chart1: "hsl(35 28% 43%)",
-    chart2: "hsl(76 53% 92%)",
-    chart3: "hsl(0 0% 93%)",
-    chart4: "hsl(75 38% 94%)",
-    chart5: "hsl(35 28% 43%)",
   },
 
   dark: {
@@ -63,12 +57,6 @@ export const THEME = {
     ring: "hsl(67 54% 92%)",
 
     radius: "0.5rem",
-
-    chart1: "hsl(67 54% 92%)",
-    chart2: "hsl(67 10% 32%)",
-    chart3: "hsl(0 0% 29%)",
-    chart4: "hsl(67 14% 35%)",
-    chart5: "hsl(67 54% 92%)",
   },
 };
 
