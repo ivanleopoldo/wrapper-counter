@@ -9,6 +9,7 @@ import * as ScreenOrientation from "expo-screen-orientation";
 import { StatusBar } from "expo-status-bar";
 import { colorScheme } from "nativewind";
 import { Platform } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 if (
   Device.deviceType !== Device.DeviceType.TABLET &&
@@ -23,11 +24,13 @@ export default function RootLayout() {
   const scheme = colorScheme.get() || "dark";
   return (
     <ThemeProvider value={NAV_THEME[scheme]}>
-      <StatusBar style={scheme == "dark" ? "light" : "dark"} />
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(tabs)" />
-      </Stack>
-      <PortalHost />
+      <SafeAreaProvider>
+        <StatusBar style={scheme == "dark" ? "light" : "dark"} />
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="(tabs)" />
+        </Stack>
+        <PortalHost />
+      </SafeAreaProvider>
     </ThemeProvider>
   );
 }
