@@ -1,6 +1,13 @@
-import { ChartPie, CogIcon, House } from "@/lib/icons";
-import { TabList, Tabs, TabSlot, TabTrigger } from "expo-router/ui";
-import { View } from "react-native";
+import { ChartPie, House, Settings } from "@/lib/icons";
+import {
+  TabList,
+  Tabs,
+  TabSlot,
+  TabTrigger,
+  TabTriggerSlotProps,
+} from "expo-router/ui";
+import React, { cloneElement } from "react";
+import { Pressable, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function TabsLayout() {
@@ -9,23 +16,43 @@ export default function TabsLayout() {
       <SafeAreaView className="flex-1">
         <TabSlot />
       </SafeAreaView>
-      <TabList className="w-full sm:w-fit gap-2 rounded-2xl justify-around bg-card border border-border self-center px-2 py-1">
-        <TabTrigger name="home" href="/">
-          <View className="p-2">
+      <TabList className="gap-2 rounded-2xl justify-around bg-card border border-border self-center px-2 py-1">
+        <TabTrigger name="home" href="/" asChild>
+          <TabContainer>
             <House />
-          </View>
+          </TabContainer>
         </TabTrigger>
-        <TabTrigger name="analytics" href="/analytics">
-          <View className="p-2">
+        <TabTrigger name="analytics" href="/analytics" asChild>
+          <TabContainer>
             <ChartPie />
-          </View>
+          </TabContainer>
         </TabTrigger>
-        <TabTrigger name="settings" href="/settings">
-          <View className="p-2">
-            <CogIcon />
-          </View>
+        <TabTrigger name="settings" href="/settings" asChild>
+          <TabContainer>
+            <Settings />
+          </TabContainer>
         </TabTrigger>
       </TabList>
     </Tabs>
+  );
+}
+
+function TabContainer({ children, ...props }: TabTriggerSlotProps) {
+  const childrenArray = React.Children.toArray(children);
+  return (
+    <Pressable className="p-2 " {...props}>
+      <View className="flex flex-col items-center gap-1">
+        {childrenArray.map((child) =>
+          cloneElement(child as any, {
+            className: props.isFocused
+              ? "text-secondary-foreground"
+              : "text-muted-foreground/70",
+          })
+        )}
+        {props.isFocused && (
+          <View className="size-1 bg-secondary-foreground rounded-full" />
+        )}
+      </View>
+    </Pressable>
   );
 }

@@ -1,7 +1,7 @@
 import {
   ChartPie as BaseChartPie,
-  CogIcon as BaseCogIcon,
   House as BaseHouse,
+  Settings as BaseSettings,
   LucideIcon,
   LucideProps,
 } from "lucide-react-native";
@@ -25,7 +25,7 @@ function interop(icon: LucideIcon) {
 }
 
 const House = interop(BaseHouse);
-const CogIcon = interop(BaseCogIcon);
+const Settings = interop(BaseSettings);
 const ChartPie = interop(BaseChartPie);
 
-export { ChartPie, CogIcon, House, interop };
+export { ChartPie, House, interop, Settings };
