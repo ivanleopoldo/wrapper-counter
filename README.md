@@ -1,50 +1,80 @@
-# Welcome to your Expo app 👋
+> Application in Development
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<h1 align="center">
+	<img
+		width="100%"
+		alt="The Lounge"
+		src="./assets/docs/logo-banner.png">
+</h1>
 
-## Get started
+<h4 align="center">Sales Analytics and Counter</h4>
+<p align="center">
+	<strong>
+		<a href="#overview">Overview</a>
+    •
+		<a href="#features">Features</a>
+    •
+		<a href="#installation">Installation</a>
+	</strong>
+</p>
+<p align="center">
+	<a href="https://expo.dev">
+    <img
+      alt="#Expo"
+      src="https://img.shields.io/badge/Expo-000020?logo=expo&logoColor=fff">
+  </a>
+	<a href="https://reactnative.dev/">
+    <img
+      alt="#React Native"
+      src="https://img.shields.io/badge/React_Native-%2320232a.svg?logo=react&logoColor=%2361DAFB">
+  </a>
+	<a href="https://npm.io/">
+    <img
+      alt="#NPM"
+      src="https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=fff">
+  </a>
+	<a href="https://www.typescriptlang.org/">
+    <img
+      alt="#TypeScript"
+      src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff">
+  </a>
+</p>
 
-1. Install dependencies
+<!-- TODO: Add Video Showcase -->
 
-   ```bash
-   npm install
-   ```
+<!-- TODO:  -->
 
-2. Start the app
+## Overview
 
-   ```bash
-   npx expo start
-   ```
+An app that shows sales analytics of spring roll wrappers. Kind of like a _dumb_ POS (point-of-sale) system or a counter for sales but I was overthinking the features.
 
-In the output, you'll find options to open the app in a
+Built with [Expo](https://expo.dev/), [Nativewind](https://www.nativewind.dev/), [React Native Reusables](https://reactnativereusables.com/), [InstantDB](https://www.instantdb.com)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Features
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **Sales Counter**: Quick and easy tracking of spring roll wrapper sales
+- **Analytics Dashboard**: View sales data with charts and statistics
+- **Real-time Updates**: Instant synchronization across devices using InstantDB
+- **Offline Support**: Works without internet connection with automatic sync when online
+- **Clean UI**: Beautiful and intuitive interface built with Nativewind and React Native Reusables
 
-## Get a fresh project
+## Installation
 
-When you're ready, run:
+### Running stable releases
+
+> To be added
+
+### Running from source
 
 ```bash
-npm run reset-project
+git clone https://github.com/ivanleopoldo/wrapper-counter.git
+cd wrapper-counter
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Then use the Expo app on your phone or press `i` for iOS simulator / `a` for Android emulator.
 
-## Learn more
+## License
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+MIT
