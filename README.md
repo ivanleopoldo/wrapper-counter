@@ -15,6 +15,10 @@
 		<a href="#features">Features</a>
     •
 		<a href="#installation">Installation</a>
+    •
+		<a href="#to-do">To-do</a>
+    •
+		<a href="#contributing">Contributing</a>
 	</strong>
 </p>
 <p align="center">
@@ -42,8 +46,6 @@
 
 <!-- TODO: Add Video Showcase -->
 
-<!-- TODO:  -->
-
 ## Overview
 
 An app that shows sales analytics of spring roll wrappers. Kind of like a _dumb_ POS (point-of-sale) system or a counter for sales but I was overthinking the features.
@@ -60,21 +62,73 @@ Built with [Expo](https://expo.dev/), [Nativewind](https://www.nativewind.dev/),
 
 ## Installation
 
-### Running stable releases
+### Running Stable Releases
 
-> To be added
+> Stable releases coming soon! The app is currently in active development.
 
-### Running from source
+### Running from Source
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/ivanleopoldo/wrapper-counter.git
+   cd wrapper-counter
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   pnpm install
+   # or
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start the development server**
+
+   ```bash
+   npx expo start
+   ```
+
+4. **Run on your preferred platform**
+   - Press `i` for iOS simulator
+   - Press `a` for Android emulator
+   - Scan QR code with Expo Go app on your physical device
+
+### Building for Production
 
 ```bash
-git clone https://github.com/ivanleopoldo/wrapper-counter.git
-cd wrapper-counter
-npm install
-npx expo start
+# iOS
+npx expo build:ios
+
+# Android
+npx expo build:android
 ```
 
-Then use the Expo app on your phone or press `i` for iOS simulator / `a` for Android emulator.
+## To-do
+
+- [ ] Add user authentication
+- [ ] Implement InstantDB integration
+- [ ] Create analytics charts and visualizations
+- [ ] Add data export functionality
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+### Development Guidelines
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
 MIT
+
+---
+
+<p align="center">Made with ❤️ and ☕</p>
