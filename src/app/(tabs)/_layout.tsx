@@ -49,9 +49,6 @@ function TabContainer({ children, ...props }: TabTriggerSlotProps) {
               : "text-muted-foreground/70",
           })
         )}
-        {props.isFocused && (
-          <View className="size-1 bg-secondary-foreground rounded-full" />
-        )}
       </View>
     </Pressable>
   );
